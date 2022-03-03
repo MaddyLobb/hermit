@@ -9,23 +9,64 @@
         margin-bottom: -15px;
     }
     .end{
-        background-color: #2E1845;
+        background-color: var(--darkpurple);
         height: 90vh;
         display: flex;
+
         aside{
-            width: 50vw;
+            //width: 50vw;
             display: flex;
             align-items: center;
             justify-content: center;
+
+            @include md{
+                margin-left: -100px;
+            }
+
+            @include lg{
+                margin-left: -200px;
+            }
+
+            @include xl{
+                margin-left: -300px;
+            }
+
             div{
-                width: 50%;
+                width: 80%;
                 padding: 70px 15px;
                 border: 5px white solid;
                 border-radius: 80px;
                 text-align: center;
+                color: var(--tan);
+
+                @include md{
+                    width: 50%;
+                }
+
+                h2{
+                    font-size: rem-calc(26);
+
+                    @include md{
+                        font-size: rem-calc(64); 
+                    }
+                }
 
                 h3{
                     margin: 65px 0px;
+                    font-size: rem-calc(16);
+
+                    @include md{
+                        font-size: rem-calc(24); 
+                    }
+                }
+
+                p{
+                    font-size: rem-calc(16);
+                    padding: 16px;
+
+                    @include md{
+                        font-size: rem-calc(18); 
+                    }
                 }
             }
         }

@@ -10,6 +10,24 @@ html {
 /* =============
     Variables
 ============= */
+:root {
+  --white: #fff;
+  --darkpurple: #2E1845;
+  --purple: #A6416E;
+  --pink: #C26B7A;
+  --lightpink: #FFC3A4;
+  --tan: #F9D5AE;
+}
+
+[data-theme=light] {
+  --white: #fff;
+  --darkpurple: #22152F;
+  --purple: #722B4A;
+  --pink: #A54E5D;
+  --lightpink: #DC9C7C;
+  --tan: #DDB68B;
+}
+
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -392,6 +410,7 @@ h1, h2, h3, h4 {
 p {
   margin: 0;
   padding: 0;
+  font-family: "Montserrat", sans-serif;
 }
 
 #one {
@@ -467,7 +486,7 @@ textarea {
   margin-bottom: -15px;
 }
 #intro .intro {
-  background-color: #F9D5AE;
+  background-color: var(--tan);
   height: 90vh;
   display: flex;
 }
@@ -483,10 +502,32 @@ textarea {
   border: 5px white solid;
   border-radius: 80px;
   text-align: center;
-  color: #2E1845;
+  color: var(--darkpurple);
+}
+#intro .intro aside div h2 {
+  font-size: 1.625rem;
+}
+@media (min-width: 768px) {
+  #intro .intro aside div h2 {
+    font-size: 4rem;
+  }
 }
 #intro .intro aside div h3 {
   margin: 65px 0px;
+  font-size: 1rem;
+}
+@media (min-width: 768px) {
+  #intro .intro aside div h3 {
+    font-size: 1.5rem;
+  }
+}
+#intro .intro aside div p {
+  font-size: 1rem;
+}
+@media (min-width: 768px) {
+  #intro .intro aside div p {
+    font-size: 1.125rem;
+  }
 }
 
 /* =============
@@ -500,7 +541,7 @@ textarea {
   margin-bottom: -15px;
 }
 #food .food {
-  background-color: #FFC3A4;
+  background-color: var(--lightpink);
   height: 90vh;
   display: flex;
 }
@@ -519,9 +560,32 @@ textarea {
   border: 5px white solid;
   border-radius: 80px;
   text-align: center;
+  color: var(--purple);
+}
+#food .food aside div h2 {
+  font-size: 1.625rem;
+}
+@media (min-width: 768px) {
+  #food .food aside div h2 {
+    font-size: 4rem;
+  }
 }
 #food .food aside div h3 {
   margin: 65px 0px;
+  font-size: 1rem;
+}
+@media (min-width: 768px) {
+  #food .food aside div h3 {
+    font-size: 1.5rem;
+  }
+}
+#food .food aside div p {
+  font-size: 1rem;
+}
+@media (min-width: 768px) {
+  #food .food aside div p {
+    font-size: 1.125rem;
+  }
 }
 
 /* =============
@@ -535,7 +599,7 @@ textarea {
   margin-bottom: -15px;
 }
 #shell .shell {
-  background-color: #C26B7A;
+  background-color: var(--pink);
   height: 90vh;
   display: flex;
   align-items: center;
@@ -553,9 +617,32 @@ textarea {
   border: 5px white solid;
   border-radius: 80px;
   text-align: center;
+  color: var(--tan);
+}
+#shell .shell aside div h2 {
+  font-size: 1.625rem;
+}
+@media (min-width: 768px) {
+  #shell .shell aside div h2 {
+    font-size: 4rem;
+  }
 }
 #shell .shell aside div h3 {
   margin: 65px 0px;
+  font-size: 1rem;
+}
+@media (min-width: 768px) {
+  #shell .shell aside div h3 {
+    font-size: 1.5rem;
+  }
+}
+#shell .shell aside div p {
+  font-size: 1rem;
+}
+@media (min-width: 768px) {
+  #shell .shell aside div p {
+    font-size: 1.125rem;
+  }
 }
 
 /* =============
@@ -569,7 +656,7 @@ textarea {
   margin-bottom: -15px;
 }
 #life .life {
-  background-color: #A6416E;
+  background-color: var(--purple);
   height: 90vh;
   display: flex;
 }
@@ -585,9 +672,32 @@ textarea {
   border: 5px white solid;
   border-radius: 80px;
   text-align: center;
+  color: var(--lightpink);
+}
+#life .life aside div h2 {
+  font-size: 1.625rem;
+}
+@media (min-width: 768px) {
+  #life .life aside div h2 {
+    font-size: 4rem;
+  }
 }
 #life .life aside div h3 {
   margin: 65px 0px;
+  font-size: 1rem;
+}
+@media (min-width: 768px) {
+  #life .life aside div h3 {
+    font-size: 1.5rem;
+  }
+}
+#life .life aside div p {
+  font-size: 1rem;
+}
+@media (min-width: 768px) {
+  #life .life aside div p {
+    font-size: 1.125rem;
+  }
 }
 
 /* =============
@@ -601,23 +711,66 @@ textarea {
   margin-bottom: -15px;
 }
 #end .end {
-  background-color: #2E1845;
+  background-color: var(--darkpurple);
   height: 90vh;
   display: flex;
 }
 #end .end aside {
-  width: 50vw;
   display: flex;
   align-items: center;
   justify-content: center;
 }
+@media (min-width: 768px) {
+  #end .end aside {
+    margin-left: -100px;
+  }
+}
+@media (min-width: 992px) {
+  #end .end aside {
+    margin-left: -200px;
+  }
+}
+@media (min-width: 1200px) {
+  #end .end aside {
+    margin-left: -300px;
+  }
+}
 #end .end aside div {
-  width: 50%;
+  width: 80%;
   padding: 70px 15px;
   border: 5px white solid;
   border-radius: 80px;
   text-align: center;
+  color: var(--tan);
+}
+@media (min-width: 768px) {
+  #end .end aside div {
+    width: 50%;
+  }
+}
+#end .end aside div h2 {
+  font-size: 1.625rem;
+}
+@media (min-width: 768px) {
+  #end .end aside div h2 {
+    font-size: 4rem;
+  }
 }
 #end .end aside div h3 {
   margin: 65px 0px;
+  font-size: 1rem;
+}
+@media (min-width: 768px) {
+  #end .end aside div h3 {
+    font-size: 1.5rem;
+  }
+}
+#end .end aside div p {
+  font-size: 1rem;
+  padding: 16px;
+}
+@media (min-width: 768px) {
+  #end .end aside div p {
+    font-size: 1.125rem;
+  }
 }

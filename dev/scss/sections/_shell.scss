@@ -9,7 +9,7 @@
         margin-bottom: -15px;
     }
     .shell{
-        background-color: #C26B7A;
+        background-color: var(--pink);
         height: 90vh;
         display: flex;
         align-items: center;
@@ -25,9 +25,31 @@
                 border: 5px white solid;
                 border-radius: 80px;
                 text-align: center;
+                color: var(--tan);
+
+                h2{
+                    font-size: rem-calc(26);
+
+                    @include md{
+                        font-size: rem-calc(64); 
+                    }
+                }
 
                 h3{
                     margin: 65px 0px;
+                    font-size: rem-calc(16);
+
+                    @include md{
+                        font-size: rem-calc(24); 
+                    }
+                }
+
+                p{
+                    font-size: rem-calc(16);
+
+                    @include md{
+                        font-size: rem-calc(18); 
+                    }
                 }
             }
         }

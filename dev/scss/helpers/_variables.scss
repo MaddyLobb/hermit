@@ -17,9 +17,28 @@ $screen-xl-min: 1200px;
 
 // Colors
 $white: #fff;
-$black: #000;
-$darkPurple: #2E1845;
-$purple: #A6416E;
-$pink: #C26B7A;
-$orange: #D58A62;
+// $darkPurple: #2E1845;
+// $purple: #A6416E;
+// $pink: #C26B7A;
+// $orange: #D58A62;
+// $tan: #F9D5AE;
+
+:root {
+    --white: #fff;
+    --darkpurple: #2E1845;
+    --purple: #A6416E;
+    --pink: #C26B7A;
+    --lightpink: #FFC3A4;
+    --tan: #F9D5AE; 
+}
+
+[data-theme="light"] {
+
+    --white: #fff;
+    --darkpurple: #22152F;
+    --purple: #722B4A;
+    --pink: #A54E5D;
+    --lightpink: #DC9C7C;
+    --tan: #DDB68B; 
+}
 

@@ -8,7 +8,7 @@
         margin-bottom: -15px;
     }
     .intro{
-        background-color: #F9D5AE;
+        background-color: var(--tan);
         height: 90vh;
         display: flex;
         aside{
@@ -22,10 +22,31 @@
                 border: 5px white solid;
                 border-radius: 80px;
                 text-align: center;
-                color: #2E1845;
+                color: var(--darkpurple);
+
+                h2{
+                    font-size: rem-calc(26);
+
+                    @include md{
+                        font-size: rem-calc(64); 
+                    }
+                }
 
                 h3{
                     margin: 65px 0px;
+                    font-size: rem-calc(16);
+
+                    @include md{
+                        font-size: rem-calc(24); 
+                    }
+                }
+
+                p{
+                    font-size: rem-calc(16);
+
+                    @include md{
+                        font-size: rem-calc(18); 
+                    }
                 }
             }
         }

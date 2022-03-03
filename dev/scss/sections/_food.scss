@@ -9,7 +9,7 @@
         margin-bottom: -15px;
     }
     .food{
-        background-color: #FFC3A4;
+        background-color: var(--lightpink);
         height: 90vh;
         display: flex;
         >div{
@@ -26,9 +26,31 @@
                 border: 5px white solid;
                 border-radius: 80px;
                 text-align: center;
+                color: var(--purple);
+
+                h2{
+                    font-size: rem-calc(26);
+
+                    @include md{
+                        font-size: rem-calc(64); 
+                    }
+                }
 
                 h3{
                     margin: 65px 0px;
+                    font-size: rem-calc(16);
+
+                    @include md{
+                        font-size: rem-calc(24); 
+                    }
+                }
+
+                p{
+                    font-size: rem-calc(16);
+
+                    @include md{
+                        font-size: rem-calc(18); 
+                    }
                 }
             }
         }
