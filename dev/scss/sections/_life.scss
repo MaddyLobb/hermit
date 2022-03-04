@@ -3,27 +3,54 @@
 ============= */
 
 #life{
-    margin-top: -80px;
+    margin-top: -90px;
+
     #purpleWave{
         width: 100%;
-        margin-bottom: -15px;
+        margin-bottom: -10px;
     }
+
     .life{
         background-color: var(--purple);
         height: 90vh;
-        display: flex;
+
+
         aside{
-            width: 50vw;
+            //width: 50vw;
             display: flex;
-            align-items: center;
+            align-items: baseline;
             justify-content: center;
-            div{
-                width: 50%;
-                padding: 70px 15px;
+
+            //margin-top: 0px;
+
+            @include md{
+                margin-left: 60px;
+                justify-content: left;
+                align-items: center;
+            }
+
+            @include lg{
+                margin-left: 100px;
+            }
+
+            // @include xl{
+            //     margin-left: -400px;
+            // }
+
+            #life-text{
+                width: 80%;
+                padding: 80px 30px;
                 border: 5px white solid;
                 border-radius: 80px;
                 text-align: center;
                 color: var(--lightpink);
+
+                 margin-top: 50px;
+
+                @include md{
+                    max-width: 500px;
+                    margin-bottom: 110px;
+                }
 
                 h2{
                     font-size: rem-calc(26);
@@ -34,20 +61,37 @@
                 }
 
                 h3{
-                    margin: 65px 0px;
+                    margin: 25px 0px;
                     font-size: rem-calc(16);
 
                     @include md{
+                        margin: 55px 0px;
                         font-size: rem-calc(24); 
                     }
                 }
 
                 p{
                     font-size: rem-calc(16);
+                    line-height: rem-calc(20);
+                    padding: 0px 10px 16px 10px;
 
                     @include md{
                         font-size: rem-calc(18); 
+                        line-height: rem-calc(25);
+                        padding: 0px 16px 16px 16px;
                     }
+                }
+            }
+
+            #life-image{
+                z-index: 500;
+
+                #life-image-1{
+                    background-image: url("../img/HC3.jpg"); 
+                }
+
+                #life-image-2{
+                    background-image: url("../img/HC4.jpg"); 
                 }
             }
         }

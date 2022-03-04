@@ -649,62 +649,93 @@ textarea {
     Life
 ============= */
 #life {
-  margin-top: -80px;
+  margin-top: -90px;
 }
 #life #purpleWave {
   width: 100%;
-  margin-bottom: -15px;
+  margin-bottom: -10px;
 }
 #life .life {
   background-color: var(--purple);
   height: 90vh;
-  display: flex;
 }
 #life .life aside {
-  width: 50vw;
   display: flex;
-  align-items: center;
+  align-items: baseline;
   justify-content: center;
 }
-#life .life aside div {
-  width: 50%;
-  padding: 70px 15px;
+@media (min-width: 768px) {
+  #life .life aside {
+    margin-left: 60px;
+    justify-content: left;
+    align-items: center;
+  }
+}
+@media (min-width: 992px) {
+  #life .life aside {
+    margin-left: 100px;
+  }
+}
+#life .life aside #life-text {
+  width: 80%;
+  padding: 80px 30px;
   border: 5px white solid;
   border-radius: 80px;
   text-align: center;
   color: var(--lightpink);
+  margin-top: 50px;
 }
-#life .life aside div h2 {
+@media (min-width: 768px) {
+  #life .life aside #life-text {
+    max-width: 500px;
+    margin-bottom: 110px;
+  }
+}
+#life .life aside #life-text h2 {
   font-size: 1.625rem;
 }
 @media (min-width: 768px) {
-  #life .life aside div h2 {
+  #life .life aside #life-text h2 {
     font-size: 4rem;
   }
 }
-#life .life aside div h3 {
-  margin: 65px 0px;
+#life .life aside #life-text h3 {
+  margin: 25px 0px;
   font-size: 1rem;
 }
 @media (min-width: 768px) {
-  #life .life aside div h3 {
+  #life .life aside #life-text h3 {
+    margin: 55px 0px;
     font-size: 1.5rem;
   }
 }
-#life .life aside div p {
+#life .life aside #life-text p {
   font-size: 1rem;
+  line-height: 1.25rem;
+  padding: 0px 10px 16px 10px;
 }
 @media (min-width: 768px) {
-  #life .life aside div p {
+  #life .life aside #life-text p {
     font-size: 1.125rem;
+    line-height: 1.5625rem;
+    padding: 0px 16px 16px 16px;
   }
+}
+#life .life aside #life-image {
+  z-index: 500;
+}
+#life .life aside #life-image #life-image-1 {
+  background-image: url("../img/HC3.jpg");
+}
+#life .life aside #life-image #life-image-2 {
+  background-image: url("../img/HC4.jpg");
 }
 
 /* =============
     End
 ============= */
 #end {
-  margin-top: -80px;
+  margin-top: -90px;
 }
 #end #darkPurpleWave {
   width: 100%;
@@ -717,27 +748,25 @@ textarea {
 }
 #end .end aside {
   display: flex;
-  align-items: center;
+  align-items: baseline;
   justify-content: center;
+  margin-top: 50px;
 }
 @media (min-width: 768px) {
   #end .end aside {
-    margin-left: -100px;
+    margin-left: 60px;
+    justify-content: left;
+    align-items: center;
   }
 }
 @media (min-width: 992px) {
   #end .end aside {
-    margin-left: -200px;
-  }
-}
-@media (min-width: 1200px) {
-  #end .end aside {
-    margin-left: -300px;
+    margin-left: 100px;
   }
 }
 #end .end aside div {
   width: 80%;
-  padding: 70px 15px;
+  padding: 80px 30px;
   border: 5px white solid;
   border-radius: 80px;
   text-align: center;
@@ -746,6 +775,11 @@ textarea {
 @media (min-width: 768px) {
   #end .end aside div {
     width: 50%;
+  }
+}
+@media (min-width: 992px) {
+  #end .end aside div {
+    width: 40%;
   }
 }
 #end .end aside div h2 {
@@ -757,20 +791,23 @@ textarea {
   }
 }
 #end .end aside div h3 {
-  margin: 65px 0px;
+  margin: 25px 0px;
   font-size: 1rem;
 }
 @media (min-width: 768px) {
   #end .end aside div h3 {
+    margin: 55px 0px;
     font-size: 1.5rem;
   }
 }
 #end .end aside div p {
   font-size: 1rem;
-  padding: 16px;
+  padding: 0px 10px 16px 10px;
+  line-height: 1.25rem;
 }
 @media (min-width: 768px) {
   #end .end aside div p {
     font-size: 1.125rem;
+    padding: 0px 16px 16px 16px;
   }
 }
