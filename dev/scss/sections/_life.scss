@@ -4,52 +4,57 @@
 
 #life{
     margin-top: -90px;
+    //height: 90vh;
 
     #purpleWave{
         width: 100%;
         margin-bottom: -10px;
     }
 
-    .life{
+    #life-content{
         background-color: var(--purple);
-        height: 90vh;
+
+        // display: grid;
+        // grid-template-columns: auto;
+        // grid-template-areas: "life-text"
+        //                      "images";
+
+        display: flex;
+        //justify-content: center;
+        //align-items: center;
+        flex-direction: column;
+        //justify-content: space-evenly;
+
+        @include md{
+            flex-direction: row;
+        }
 
 
         aside{
-            //width: 50vw;
             display: flex;
-            align-items: baseline;
             justify-content: center;
-
-            //margin-top: 0px;
-
-            @include md{
-                margin-left: 60px;
-                justify-content: left;
-                align-items: center;
-            }
-
-            @include lg{
-                margin-left: 100px;
-            }
-
-            // @include xl{
-            //     margin-left: -400px;
-            // }
+            align-items: center;
 
             #life-text{
+                grid-area: life-text;
+
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+
                 width: 80%;
-                padding: 80px 30px;
+                padding: 50px 20px;
                 border: 5px white solid;
                 border-radius: 80px;
                 text-align: center;
                 color: var(--lightpink);
 
-                 margin-top: 50px;
+                margin-top: 50px;
 
                 @include md{
                     max-width: 500px;
                     margin-bottom: 110px;
+                    padding: 80px 30px;
                 }
 
                 h2{
@@ -83,17 +88,220 @@
                 }
             }
 
-            #life-image{
-                z-index: 500;
+        }
+    }
 
-                #life-image-1{
-                    background-image: url("../img/HC3.jpg"); 
-                }
+    #life-image-container{
+        grid-area: images;
+        //height: 100%;
+        //width: 100%;
+        padding-top: 40px;
+        margin-bottom: 140px;
 
-                #life-image-2{
-                    background-image: url("../img/HC4.jpg"); 
+        ul{
+            //display: block;
+            // height: 100%;
+            //width: 100%;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            justify-content: space-evenly;
+
+            li{
+                height: 100%;
+                width: 100%;
+                background-position: center;
+                background-size: cover; 
+                border: 5px white solid;
+                border-radius: 20px;
+                min-height: 150px;
+                max-width: 150px;
+
+                @include md{
+                    min-height: 200px;
+                    max-width: 200px;  
                 }
+                
             }
+        }
+
+    }
+
+    #life-image-1{
+        background-image: url("../img/HC3.jpg");
+        //grid-area: image-1;
+    }
+
+    #life-image-2{
+        background-image: url("../img/HC4.jpg");
+        //grid-area: image-2; 
+        display: none;
+
+        @include md{
+            display: block;
+        }
+    }
+
+    #life-illustration-container{
+        height: 100%;
+        overflow: hidden;
+    
+    }
+    #tan-star-1{
+        height: 50%;
+    }
+
+    #tan-star-2{
+        display: none;
+
+        @include md{
+            display: block;
+        }
+    }
+
+    #tan-star-3{
+        display: none;
+
+        @include md{
+            display: block;
         }
     }
 }
+
+// #life{
+//     margin-top: -90px;
+
+//     #purpleWave{
+//         width: 100%;
+//         margin-bottom: -10px;
+//     }
+
+//     .life{
+//         background-color: var(--purple);
+//         height: 90vh;
+
+//         display: grid;
+//         grid-template-columns: 16px auto 16px;
+//         grid-area: "content"
+//                    "images";
+
+
+//         aside{
+//             grid-area: content;
+
+//             //width: 50vw;
+//             // display: flex;
+//             // align-items: baseline;
+//             // justify-content: center;
+
+//             //margin-top: 0px;
+
+//             @include md{
+//                 margin-left: 60px;
+//                 justify-content: left;
+//                 align-items: center;
+//             }
+
+//             @include lg{
+//                 margin-left: 100px;
+//             }
+
+//             // @include xl{
+//             //     margin-left: -400px;
+//             // }
+
+//             #life-text{
+//                 width: 80%;
+//                 padding: 80px 30px;
+//                 border: 5px white solid;
+//                 border-radius: 80px;
+//                 text-align: center;
+//                 color: var(--lightpink);
+
+//                 margin-top: 50px;
+
+//                 @include md{
+//                     max-width: 500px;
+//                     margin-bottom: 110px;
+//                 }
+
+//                 h2{
+//                     font-size: rem-calc(26);
+
+//                     @include md{
+//                         font-size: rem-calc(64); 
+//                     }
+//                 }
+
+//                 h3{
+//                     margin: 25px 0px;
+//                     font-size: rem-calc(16);
+
+//                     @include md{
+//                         margin: 55px 0px;
+//                         font-size: rem-calc(24); 
+//                     }
+//                 }
+
+//                 p{
+//                     font-size: rem-calc(16);
+//                     line-height: rem-calc(20);
+//                     padding: 0px 10px 16px 10px;
+
+//                     @include md{
+//                         font-size: rem-calc(18); 
+//                         line-height: rem-calc(25);
+//                         padding: 0px 16px 16px 16px;
+//                     }
+//                 }
+//             }
+
+//         }
+//     }
+
+//     #life-image-container{
+//         grid-area: images;
+
+//         height: 100%;
+//         width: 100%;
+//         border-radius: 5px red solid;
+//         z-index: 3000;
+
+//         display: grid;
+//         grid-template-columns: 200px 200px;
+//         grid-template-areas: "image-1 image-2";
+
+//         gap: 20px;
+
+
+//         ul{
+//             // height: 200px;
+//             // width: 200px;
+//             //display: inline-block;
+//             border-radius: 5px red solid;
+
+//             li{
+//                 background-position: center;
+//                 background-size: cover; 
+//                 border-radius: 5px red solid;
+//             }
+//         }
+
+//     }
+
+//     #life-image-1{
+//         background-image: url("../img/HC3.jpg");
+//         border-radius: 5px red solid;
+//         grid-area: image-1;
+//         min-height: 200px;
+//         max-width: 200px;
+//     }
+
+//     #life-image-2{
+//         background-image: url("../img/HC4.jpg");
+//         grid-area: image-2; 
+//         min-height: 200px;
+//         max-width: 200px;
+//     }
+// }

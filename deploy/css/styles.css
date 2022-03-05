@@ -655,30 +655,28 @@ textarea {
   width: 100%;
   margin-bottom: -10px;
 }
-#life .life {
+#life #life-content {
   background-color: var(--purple);
-  height: 90vh;
-}
-#life .life aside {
   display: flex;
-  align-items: baseline;
-  justify-content: center;
+  flex-direction: column;
 }
 @media (min-width: 768px) {
-  #life .life aside {
-    margin-left: 60px;
-    justify-content: left;
-    align-items: center;
+  #life #life-content {
+    flex-direction: row;
   }
 }
-@media (min-width: 992px) {
-  #life .life aside {
-    margin-left: 100px;
-  }
+#life #life-content aside {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-#life .life aside #life-text {
+#life #life-content aside #life-text {
+  grid-area: life-text;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   width: 80%;
-  padding: 80px 30px;
+  padding: 50px 20px;
   border: 5px white solid;
   border-radius: 80px;
   text-align: center;
@@ -686,49 +684,103 @@ textarea {
   margin-top: 50px;
 }
 @media (min-width: 768px) {
-  #life .life aside #life-text {
+  #life #life-content aside #life-text {
     max-width: 500px;
     margin-bottom: 110px;
+    padding: 80px 30px;
   }
 }
-#life .life aside #life-text h2 {
+#life #life-content aside #life-text h2 {
   font-size: 1.625rem;
 }
 @media (min-width: 768px) {
-  #life .life aside #life-text h2 {
+  #life #life-content aside #life-text h2 {
     font-size: 4rem;
   }
 }
-#life .life aside #life-text h3 {
+#life #life-content aside #life-text h3 {
   margin: 25px 0px;
   font-size: 1rem;
 }
 @media (min-width: 768px) {
-  #life .life aside #life-text h3 {
+  #life #life-content aside #life-text h3 {
     margin: 55px 0px;
     font-size: 1.5rem;
   }
 }
-#life .life aside #life-text p {
+#life #life-content aside #life-text p {
   font-size: 1rem;
   line-height: 1.25rem;
   padding: 0px 10px 16px 10px;
 }
 @media (min-width: 768px) {
-  #life .life aside #life-text p {
+  #life #life-content aside #life-text p {
     font-size: 1.125rem;
     line-height: 1.5625rem;
     padding: 0px 16px 16px 16px;
   }
 }
-#life .life aside #life-image {
-  z-index: 500;
+#life #life-image-container {
+  grid-area: images;
+  padding-top: 40px;
+  margin-bottom: 140px;
 }
-#life .life aside #life-image #life-image-1 {
+#life #life-image-container ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-evenly;
+}
+#life #life-image-container ul li {
+  height: 100%;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+  border: 5px white solid;
+  border-radius: 20px;
+  min-height: 150px;
+  max-width: 150px;
+}
+@media (min-width: 768px) {
+  #life #life-image-container ul li {
+    min-height: 200px;
+    max-width: 200px;
+  }
+}
+#life #life-image-1 {
   background-image: url("../img/HC3.jpg");
 }
-#life .life aside #life-image #life-image-2 {
+#life #life-image-2 {
   background-image: url("../img/HC4.jpg");
+  display: none;
+}
+@media (min-width: 768px) {
+  #life #life-image-2 {
+    display: block;
+  }
+}
+#life #life-illustration-container {
+  height: 100%;
+  overflow: hidden;
+}
+#life #tan-star-1 {
+  height: 50%;
+}
+#life #tan-star-2 {
+  display: none;
+}
+@media (min-width: 768px) {
+  #life #tan-star-2 {
+    display: block;
+  }
+}
+#life #tan-star-3 {
+  display: none;
+}
+@media (min-width: 768px) {
+  #life #tan-star-3 {
+    display: block;
+  }
 }
 
 /* =============
