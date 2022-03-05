@@ -655,23 +655,33 @@ textarea {
   width: 100%;
   margin-bottom: -10px;
 }
-#life #life-content {
+#life #life-content-container {
   background-color: var(--purple);
+}
+#life #life-content {
+  height: 100%;
   display: flex;
   flex-direction: column;
+  justify-content: space-evenly;
 }
 @media (min-width: 768px) {
   #life #life-content {
     flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-left: 50px;
+    margin-right: 50px;
   }
 }
 #life #life-content aside {
+  height: 100%;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 #life #life-content aside #life-text {
-  grid-area: life-text;
   justify-content: center;
   align-items: center;
   flex-direction: column;
@@ -685,9 +695,13 @@ textarea {
 }
 @media (min-width: 768px) {
   #life #life-content aside #life-text {
-    max-width: 500px;
-    margin-bottom: 110px;
     padding: 80px 30px;
+    width: 450px;
+  }
+}
+@media (min-width: 992px) {
+  #life #life-content aside #life-text {
+    width: 500px;
   }
 }
 #life #life-content aside #life-text h2 {
@@ -722,14 +736,22 @@ textarea {
 }
 #life #life-image-container {
   grid-area: images;
+  height: 100%;
+  width: 100%;
   padding-top: 40px;
   margin-bottom: 140px;
 }
+@media (min-width: 768px) {
+  #life #life-image-container {
+    padding-top: 0px;
+    margin-bottom: 0px;
+  }
+}
 #life #life-image-container ul {
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  justify-content: space-evenly;
 }
 #life #life-image-container ul li {
   height: 100%;
@@ -738,30 +760,45 @@ textarea {
   background-size: cover;
   border: 5px white solid;
   border-radius: 20px;
-  min-height: 150px;
-  max-width: 150px;
+  height: 150px;
+  width: 150px;
 }
-@media (min-width: 768px) {
+@media (min-width: 1200px) {
   #life #life-image-container ul li {
-    min-height: 200px;
-    max-width: 200px;
+    height: 200px;
+    width: 200px;
   }
 }
 #life #life-image-1 {
   background-image: url("../img/HC3.jpg");
 }
+@media (min-width: 768px) {
+  #life #life-image-1 {
+    display: block;
+    margin-left: 30px;
+  }
+}
 #life #life-image-2 {
   background-image: url("../img/HC4.jpg");
   display: none;
 }
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   #life #life-image-2 {
     display: block;
+    margin-left: 30px;
+  }
+}
+@media (min-width: 1200px) {
+  #life #life-image-2 {
+    margin-left: 60px;
   }
 }
 #life #life-illustration-container {
   height: 100%;
-  overflow: hidden;
+}
+#life #life-illustration-container #life-illustrations {
+  max-height: 200px;
+  min-width: 200px;
 }
 #life #tan-star-1 {
   height: 50%;
