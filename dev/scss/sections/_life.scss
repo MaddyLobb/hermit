@@ -3,8 +3,9 @@
 ============= */
 
 #life{
+    height: 100%;
+    width: 100vw;
     margin-top: -90px;
-    //height: 90vh;
 
     #purpleWave{
         width: 100%;
@@ -12,48 +13,46 @@
     }
 
     #life-content-container{
+        height: 100%;
+        width: 100%;
         background-color: var(--purple);
     }
 
     #life-content{
-        height: 100%;
-        //width: 100%;
+        display: grid;
+        grid-template-columns: 16px auto 16px;
+        grid-template-areas: ". life-text ."
+                             ". life-svg ."
+                             ". life-image .";
 
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
+        row-gap: 20px;
 
         @include md{
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
-            justify-content: space-evenly;
+            grid-template-columns: 55% auto;
+            grid-template-areas: "life-text life-image"
+                                 ". life-svg";
 
-            margin-left: 50px;
-            margin-right: 50px;
+            column-gap: 20px;
+            padding-bottom: 15%;
         }
 
         @include lg{
-            //margin-left: 100px;
+            padding-top: 0%;
         }
 
 
-        aside{
+        #life-text-container{
+            grid-area: life-text;
+
             height: 100%;
             width: 100%;
 
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
             #life-text{
-                //grid-area: life-text;
 
                 justify-content: center;
                 align-items: center;
                 flex-direction: column;
 
-                width: 80%;
                 padding: 50px 20px;
                 border: 5px white solid;
                 border-radius: 80px;
@@ -64,11 +63,13 @@
 
                 @include md{
                     padding: 80px 30px;
-                    width: 450px;
+                    max-width: 450px;
+                    margin-left: 40px;
+
                 }
 
                 @include lg{
-                    width: 500px;
+                    max-width: 100%;
                 }
 
                 h2{
@@ -106,10 +107,9 @@
     }
 
     #life-image-container{
-        grid-area: images;
+        grid-area: life-image;
         height: 100%;
         width: 100%;
-        padding-top: 40px;
         margin-bottom: 140px;
 
         @include md{
@@ -119,32 +119,29 @@
 
         ul{
             width: 100%;
-            //display: block;
-            // height: 100%;
+            height: 150px;
 
             display: flex;
             justify-content: center;
             align-items: center;
-            //justify-content: space-evenly;
+            justify-content: space-evenly;
 
             @include md{
-                //flex-direction: column;
+                flex-direction: column;
+                justify-content: center;
+                height: 100%;
             }
 
             li{
                 height: 100%;
                 width: 100%;
+
                 background-position: center;
                 background-size: cover; 
                 border: 5px white solid;
                 border-radius: 20px;
                 height: 150px;
                 width: 150px;
-
-                @include xl{
-                    height: 200px;
-                    width: 200px;
-                }
                 
             }
         }
@@ -153,41 +150,60 @@
 
     #life-image-1{
         background-image: url("../img/HC3.jpg");
-        //grid-area: image-1;
 
         @include md{
             display: block;
-            margin-left: 30px;
+
         }
     }
 
     #life-image-2{
         background-image: url("../img/HC4.jpg");
-        //grid-area: image-2; 
         display: none;
 
         @include lg{
             display: block;
-            margin-left: 30px;
-        }
-
-        @include xl{
-            margin-left: 60px;
+            margin-top: 30px;
         }
     }
 
     #life-illustration-container{
-        height: 100%;
-       // width: 100%;
+        grid-area: life-svg;
+
+        height: 30px;
+        width: 100%;
+
+        display: flex;
+        justify-content: center;
+
+        @include md{
+            height: 700px;
+            position: absolute;
+            justify-content:right;
+            align-items: center;
+        }
 
         #life-illustrations{
-             max-height: 200px;
-             min-width: 200px;
+            width: 80%;
+
+             @include md{
+                width: 35%;
+                margin-right: 40px;
+            }
+             
         }
     
     }
     #tan-star-1{
-        height: 50%;
+
+        @include md{
+            display: none;
+
+        }
+
+        @include lg{
+            display: block;
+        }
     }
 
     #tan-star-2{
@@ -206,140 +222,3 @@
         }
     }
 }
-
-// #life{
-//     margin-top: -90px;
-
-//     #purpleWave{
-//         width: 100%;
-//         margin-bottom: -10px;
-//     }
-
-//     .life{
-//         background-color: var(--purple);
-//         height: 90vh;
-
-//         display: grid;
-//         grid-template-columns: 16px auto 16px;
-//         grid-area: "content"
-//                    "images";
-
-
-//         aside{
-//             grid-area: content;
-
-//             //width: 50vw;
-//             // display: flex;
-//             // align-items: baseline;
-//             // justify-content: center;
-
-//             //margin-top: 0px;
-
-//             @include md{
-//                 margin-left: 60px;
-//                 justify-content: left;
-//                 align-items: center;
-//             }
-
-//             @include lg{
-//                 margin-left: 100px;
-//             }
-
-//             // @include xl{
-//             //     margin-left: -400px;
-//             // }
-
-//             #life-text{
-//                 width: 80%;
-//                 padding: 80px 30px;
-//                 border: 5px white solid;
-//                 border-radius: 80px;
-//                 text-align: center;
-//                 color: var(--lightpink);
-
-//                 margin-top: 50px;
-
-//                 @include md{
-//                     max-width: 500px;
-//                     margin-bottom: 110px;
-//                 }
-
-//                 h2{
-//                     font-size: rem-calc(26);
-
-//                     @include md{
-//                         font-size: rem-calc(64); 
-//                     }
-//                 }
-
-//                 h3{
-//                     margin: 25px 0px;
-//                     font-size: rem-calc(16);
-
-//                     @include md{
-//                         margin: 55px 0px;
-//                         font-size: rem-calc(24); 
-//                     }
-//                 }
-
-//                 p{
-//                     font-size: rem-calc(16);
-//                     line-height: rem-calc(20);
-//                     padding: 0px 10px 16px 10px;
-
-//                     @include md{
-//                         font-size: rem-calc(18); 
-//                         line-height: rem-calc(25);
-//                         padding: 0px 16px 16px 16px;
-//                     }
-//                 }
-//             }
-
-//         }
-//     }
-
-//     #life-image-container{
-//         grid-area: images;
-
-//         height: 100%;
-//         width: 100%;
-//         border-radius: 5px red solid;
-//         z-index: 3000;
-
-//         display: grid;
-//         grid-template-columns: 200px 200px;
-//         grid-template-areas: "image-1 image-2";
-
-//         gap: 20px;
-
-
-//         ul{
-//             // height: 200px;
-//             // width: 200px;
-//             //display: inline-block;
-//             border-radius: 5px red solid;
-
-//             li{
-//                 background-position: center;
-//                 background-size: cover; 
-//                 border-radius: 5px red solid;
-//             }
-//         }
-
-//     }
-
-//     #life-image-1{
-//         background-image: url("../img/HC3.jpg");
-//         border-radius: 5px red solid;
-//         grid-area: image-1;
-//         min-height: 200px;
-//         max-width: 200px;
-//     }
-
-//     #life-image-2{
-//         background-image: url("../img/HC4.jpg");
-//         grid-area: image-2; 
-//         min-height: 200px;
-//         max-width: 200px;
-//     }
-// }
