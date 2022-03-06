@@ -901,6 +901,33 @@ header .slider.round:before {
     display: block;
   }
 }
+#life .carousel-1 {
+  height: 100%;
+  width: 100%;
+}
+@media (min-width: 768px) {
+  #life .carousel-1 {
+    height: 750px;
+    width: 458px;
+  }
+}
+#life .carousel-1 .carousel__nav {
+  display: none;
+}
+#life .carousel-1 .carousel__slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0rem;
+  width: 100%;
+  height: 100%;
+}
+#life .carousel-1 .carousel__dots {
+  color: var(--white);
+  margin-top: 10px;
+  z-index: 20;
+  position: static;
+}
 
 /* =============
     End

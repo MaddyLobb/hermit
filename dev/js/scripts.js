@@ -31,3 +31,7 @@ if (currentTheme) {
         toggleSwitch.checked = true;
     }
 }
+//carousel
+
+import {lifeCarousel} from "./carousel";
+window.addEventListener('load', lifeCarousel);
