@@ -19,7 +19,7 @@ html {
   --tan: #F9D5AE;
 }
 
-[data-theme=light] {
+[data-theme=dark] {
   --white: #fff;
   --darkpurple: #22152F;
   --purple: #722B4A;
