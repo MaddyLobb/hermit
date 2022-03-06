@@ -1,4 +1,5 @@
 //import { gsap } from "gsap";
+import { waveColorTL } from "./wavecolor";
 
 //Darkmode//
 const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
@@ -8,11 +9,13 @@ function switchTheme(e){
     if (e.target.checked) {
         document.documentElement.setAttribute('data-theme', 'dark');
         localStorage.setItem('theme',dark);
+        waveColorTL.play();
     }
 
     else{
         document.documentElement.setAttribute('data-theme', 'light');
         localStorage.setItem('theme',light); 
+        waveColorTL.reverse();
     }
     
     console.log(toggleSwitch.checked +'this is the value for the checkbox');
@@ -31,6 +34,8 @@ if (currentTheme) {
         toggleSwitch.checked = true;
     }
 }
+
+
 //carousel
 
 import {lifeCarousel} from "./carousel";
