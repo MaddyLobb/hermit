@@ -9,6 +9,7 @@ function switchTheme(e){
     if (e.target.checked) {
         document.documentElement.setAttribute('data-theme', 'dark');
         localStorage.setItem('theme',dark);
+        console.log("here");
         waveColorTL.play();
     }
 
